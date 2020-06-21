@@ -42,6 +42,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 # Install Cloudinary for manage images
 gem 'cloudinary', '~> 1.12.0'
 
+#Install Faker to seeding data
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
