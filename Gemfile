@@ -33,6 +33,15 @@ gem 'devise'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
+# CUSTOM GEMS YIRO
+
+# Install DOTENV for protect envfile
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Install Cloudinary for manage images
+gem 'cloudinary', '~> 1.12.0'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
