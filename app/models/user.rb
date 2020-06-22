@@ -13,4 +13,11 @@ class User < ApplicationRecord
   # Helper to add photos in the model
   has_one_attached :photo
 
+  #Validations for creating and account
+  validates :name, presence: true
+  validates :role, inclusion: { in: ROLE }
+  validates :location, presence: true
+  validates :photo, presence: true
+
+
 end
