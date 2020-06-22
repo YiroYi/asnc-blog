@@ -13,6 +13,7 @@ class PostsIndex extends Component {
   renderPosts() {
     return this.props.posts.map((post) => {
       const src = post.photo_url;
+      const src_user = post.photo_url_user;
       return (
         <Link to={`/posts/${post.id}`} key={post.id}>
           <div className="post-item">
@@ -21,6 +22,10 @@ class PostsIndex extends Component {
             <p>{post.created_at}</p>
             <p>{post.updated_at}</p>
             <img src={src} alt="" />
+            <h3>{post.name}</h3>
+            <h3>{post.role}</h3>
+            <h3>{post.location}</h3>
+            <img src={src_user} alt="" />
           </div>
         </Link>
       );

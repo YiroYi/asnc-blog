@@ -17,6 +17,7 @@ class PostsShow extends Component {
       return <p>Loading...</p>;
     }
     const src = this.props.post.photo_url;
+    const src_user = this.props.post.photo_url_user;
     return (
       <div>
         <div className="post-item">
@@ -25,6 +26,10 @@ class PostsShow extends Component {
           <p>{this.props.post.created_at}</p>
           <p>{this.props.post.updated_at}</p>
           <img src={src} alt="" />
+          <h3>{this.props.post.name}</h3>
+          <h3>{this.props.post.role}</h3>
+          <h3>{this.props.post.location}</h3>
+          <img src={src_user} alt="" />
         </div>
         <Link to="/">
           Back
