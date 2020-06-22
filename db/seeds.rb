@@ -1,6 +1,6 @@
 #This File is for creating seed data for our database
 require "open-uri"
-
+tags = Post::TAGS
 User.destroy_all
 Post.destroy_all
 
@@ -64,7 +64,7 @@ counter = 0
   post = Post.new(
     title: Faker::Books::CultureSeries.book,
     body: Faker::Quote.matz,
-    tags: Faker::Verb.base,
+    tags: tags.sample,
     user_id: users_ids.sample,
   )
 
