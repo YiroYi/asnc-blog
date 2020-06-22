@@ -22,7 +22,7 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :role, required: true, autofocus: true %>
+    <%= f.input :role, as: :radio_buttons, collection: User::ROLE, wrapper: :vertical_collection_inline %>
     <%= f.input :location, required: true, autofocus: true %>
     <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
     <%= f.input :photo, as: :file %>

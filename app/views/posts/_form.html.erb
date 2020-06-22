@@ -1,0 +1,13 @@
+<div>
+  <h2>Create a post</h2>
+
+  <%= simple_form_for [current_user, post] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :body %>
+    <%= f.input :tags, as: :radio_buttons, collection: Post::TAGS, wrapper: :vertical_collection_inline %>
+    <%= f.input :photo, as: :file %>
+    <div class="d-flex justify-content-center">
+    <%= f.submit "Create Post", class:"btn btn-lg btn-success" %>
+    </div>
+  <% end %>
+</div>
