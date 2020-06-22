@@ -16,7 +16,6 @@ class Post < ApplicationRecord
   validates :tags, inclusion: { in: TAGS }
   validates :photo, presence: true
 
-
   def photo_url
     rails_blob_path(self.photo, disposition: "attachment", only_path: true)
   end
