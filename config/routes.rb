@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  #Home Page React
   root to: 'pages#home'
 
   # This are the routes for the POSTING METHOD
@@ -13,4 +14,8 @@ Rails.application.routes.draw do
       resources :posts, only: [ :index, :show, :create, :update, :destroy]
     end
   end
+
+  # These are the routes to connect React Front-End with Rails API.
+  # Show View REACT
+  get "/posts/:id", to: 'pages#home'
 end
