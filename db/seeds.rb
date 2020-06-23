@@ -62,7 +62,7 @@ counter = 0
 20.times do
 
   post = Post.new(
-    title: Faker::Books::CultureSeries.book,
+    title: Faker::GreekPhilosophers.quote,
     body: Faker::Quote.matz,
     tags: tags.sample,
     user_id: users_ids.sample,

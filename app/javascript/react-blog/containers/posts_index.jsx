@@ -21,7 +21,7 @@ class PostsIndex extends Component {
                   <div id="card-post-title">
                     <Link to={`/posts/${post.id}`} key={post.id}  style={{ textDecoration: 'none' }}>
                       <span className="link-style-header">
-                        <p>{post.title}</p>
+                        <p className="card-title-line-height">{post.title}</p>
                       </span>
                     </Link>
                   </div>
@@ -41,7 +41,7 @@ class PostsIndex extends Component {
                     <div className="col-4 card-user-info text-left">
                       <h4 id="card-user-name">{post.name}</h4>
                       <p>{post.role}</p>
-                      <p>{post.location}</p>
+                      <p className="card-location-line-height">{post.location}</p>
                     </div>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ class PostsIndex extends Component {
                   <img src={src} alt="" />
                 </div>
                 <div className="col-9 card-post-body">
-                  <p>{post.body}</p>
+                  <p className="card-displayed-text">{post.body}</p>
                 </div>
               </div>
             </div>
