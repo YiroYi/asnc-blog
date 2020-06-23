@@ -24,6 +24,23 @@
 .card-content img {
   height: 130px;
   width: 270px;
+  background-size: cover;
+}
+
+@media(max-width: 1300px) {
+  .card-content img {
+    height: 130px;
+  width: 200px;
+    background-size: cover;
+  }
+}
+
+@media(max-width: 992px) {
+  .card-content img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
 }
 
 .card-time {

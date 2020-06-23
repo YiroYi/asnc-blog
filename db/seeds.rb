@@ -17,7 +17,7 @@ y = User.new(
   location:"Mexico"
 )
 
-y.photo.attach(io: File.open('app/assets/images/images.png'), filename: 'me.jpg', content_type: 'image/jpg')
+y.photo.attach(io: File.open('app/assets/images/me.jpeg'), filename: 'me.jpg', content_type: 'image/jpg')
 y.save!
 
 puts "Master user created"
@@ -32,7 +32,7 @@ user_one = User.new(
   location: Faker::Address.city
 )
 
-user_one.photo.attach(io: URI.open("https://cdn4.iconfinder.com/data/icons/avatars-circle-2/72/146-512.png"), filename: 'avatar_one.jpg', content_type: 'image/jpg')
+user_one.photo.attach(io: URI.open("app/assets/images/mex.jpg"), filename: 'avatar_one.jpg', content_type: 'image/jpg')
 user_one.save!
 
 puts "user_one created"
@@ -45,7 +45,7 @@ user_two = User.new(
   location: Faker::Address.city
 )
 
-user_two.photo.attach(io: URI.open("https://cdn4.iconfinder.com/data/icons/avatars-circle-2/72/136-512.png"), filename: 'avatar_one.jpg', content_type: 'image/jpg')
+user_two.photo.attach(io: URI.open("app/assets/images/happy.jpg"), filename: 'avatar_one.jpg', content_type: 'image/jpg')
 user_two.save!
 
 puts "user_two created"
