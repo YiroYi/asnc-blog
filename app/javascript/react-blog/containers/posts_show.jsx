@@ -21,15 +21,21 @@ class PostsShow extends Component {
     return (
       <div>
         <div className="post-item">
-          <h3>{this.props.post.title}</h3>
-          <p>{this.props.post.body}</p>
-          <p>{this.props.post.created_at}</p>
-          <p>{this.props.post.updated_at}</p>
-          <img src={src} alt="" />
-          <h3>{this.props.post.name}</h3>
-          <h3>{this.props.post.role}</h3>
-          <h3>{this.props.post.location}</h3>
-          <img src={src_user} alt="" />
+          <div className="card">
+            <div className="card-content">
+              <h3>{this.props.post.title}</h3>
+              <p>{this.props.post.body}</p>
+              <p>{this.props.post.created_at}</p>
+              <p>{this.props.post.updated_at}</p>
+              <img src={src} alt="" />
+            </div>
+            <div className="card-user">
+              <h3>{this.props.post.name}</h3>
+              <h3>{this.props.post.role}</h3>
+              <h3>{this.props.post.location}</h3>
+              <img src={src_user} alt="" />
+            </div>
+          </div>
         </div>
         <Link to="/">
           Back

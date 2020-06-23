@@ -15,19 +15,46 @@ class PostsIndex extends Component {
       const src = post.photo_url;
       const src_user = post.photo_url_user;
       return (
-        <Link to={`/posts/${post.id}`} key={post.id}>
-          <div className="post-item">
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
-            <p>{post.created_at}</p>
-            <p>{post.updated_at}</p>
-            <img src={src} alt="" />
-            <h3>{post.name}</h3>
-            <h3>{post.role}</h3>
-            <h3>{post.location}</h3>
-            <img src={src_user} alt="" />
-          </div>
-        </Link>
+            <div className="card">
+              <div className="row card-top">
+                <div className="col-9">
+                  <div id="card-post-title">
+                    <Link to={`/posts/${post.id}`} key={post.id}  style={{ textDecoration: 'none' }}>
+                      <span className="link-style-header">
+                        <p>{post.title}</p>
+                      </span>
+                    </Link>
+                  </div>
+                  <div className="card-time">
+                    <p>created {post.created_at}</p>
+                    <p>updated {post.updated_at}</p>
+                  </div>
+                  <div className="card-tag">
+                    <p><i className="fas fa-tags"></i>{post.tags}</p>
+                  </div>
+                </div>
+                <div className="col-3">
+                  <div className="row">
+                    <div className="col-8 text-right">
+                      <img className="avatar-large" src={src_user} alt="" />
+                    </div>
+                    <div className="col-4 card-user-info text-left">
+                      <h4 id="card-user-name">{post.name}</h4>
+                      <p>{post.role}</p>
+                      <p>{post.location}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row card-content">
+                <div className="col-3">
+                  <img src={src} alt="" />
+                </div>
+                <div className="col-9 card-post-body">
+                  <p>{post.body}</p>
+                </div>
+              </div>
+            </div>
       );
     });
   }
@@ -36,11 +63,9 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
-        <div className="first-row">
-          <h3>Blog</h3>
-          <Link className="btn btn-primary btn-cta" to="/posts/new">
-              Let's write a post!
-          </Link>
+        <div className="first-row align-middle">
+          <div className="text-left">
+          </div>
         </div>
         {this.renderPosts()}
       </div>
