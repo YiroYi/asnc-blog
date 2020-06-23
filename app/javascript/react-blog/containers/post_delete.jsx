@@ -14,7 +14,7 @@ onClick = (id) => {
       console.log("PROPS");
       console.log(this.props.id);
     return(
-      <button className="btn btn-danger" onClick={this.onClick.bind(this, this.props.id)}>Delete</button>
+      <button className="btn btn-outline-dark" onClick={this.onClick.bind(this, this.props.id)}>Delete this Post</button>
       //.bind(this, this.props.id) first this is an argument of bind.
     );
   }

@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   # These are the routes to connect React Front-End with Rails API.
   # Show View REACT
   get "/posts/:id", to: 'pages#home'
+  get "/", to: 'pages#home', as: 'home'
 end

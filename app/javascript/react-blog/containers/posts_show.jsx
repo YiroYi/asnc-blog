@@ -20,27 +20,38 @@ class PostsShow extends Component {
     const src_user = this.props.post.photo_url_user;
     return (
       <div>
-        <div className="post-item">
-          <div className="card">
-            <div className="card-content">
-              <h3>{this.props.post.title}</h3>
-              <p>{this.props.post.body}</p>
-              <p>{this.props.post.created_at}</p>
-              <p>{this.props.post.updated_at}</p>
+        <div className="card">
+          <div className="card-content d-flex">
+            <div className="mr-2 post-content">
               <img src={src} alt="" />
             </div>
-            <div className="card-user">
-              <h3>{this.props.post.name}</h3>
-              <h3>{this.props.post.role}</h3>
-              <h3>{this.props.post.location}</h3>
-              <img src={src_user} alt="" />
+            <div className="ml-5">
+              <h3 className="text-center link-style-header">{this.props.post.title}</h3>
+              <p className="text-center">created: {this.props.post.created_at} |
+              updated: {this.props.post.updated_at}</p>
+              <p>{this.props.post.body}</p>
+            </div>
+          </div>
+          <div className="mt-4">
+            <div className="d-flex">
+              <img src={src_user} className="show-post-avatar" alt="" />
+              <h3 className="ml-2">Author:</h3>
+            </div>
+            <div>
+              <p>This is {this.props.post.name} a cool {this.props.post.role}, who lives in {this.props.post.location} </p>
             </div>
           </div>
         </div>
-        <Link to="/">
-          Back
-        </Link>
-        <PostDelete id={this.props.post.id} />
+        <div className="row">
+          <div className="col-6 text-right">
+            <Link className="btn btn-dark" to="/">
+              Back to All Posts
+            </Link>
+          </div>
+          <div className="col-6">
+            <PostDelete id={this.props.post.id} />
+          </div>
+        </div>
       </div>
     );
   }
