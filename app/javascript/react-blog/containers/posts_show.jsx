@@ -21,7 +21,7 @@ class PostsShow extends Component {
     return (
       <div>
         <div className="card">
-          <div className="card-content d-flex">
+          <div className="card-content d-flex flex-row justify-content-around flex-wrap">
             <div className="mr-2 post-content">
               <img src={src} alt="" />
             </div>
@@ -33,7 +33,7 @@ class PostsShow extends Component {
             </div>
           </div>
           <div className="mt-4">
-            <div className="d-flex">
+            <div className="d-flex flex-row">
               <img src={src_user} className="show-post-avatar" alt="" />
               <h3 className="ml-2">Author:</h3>
             </div>

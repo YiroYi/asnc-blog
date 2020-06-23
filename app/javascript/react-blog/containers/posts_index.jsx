@@ -16,42 +16,46 @@ class PostsIndex extends Component {
       const src_user = post.photo_url_user;
       return (
             <div className="card">
-              <div className="row card-top">
-                <div className="col-9">
-                  <div id="card-post-title">
-                    <Link to={`/posts/${post.id}`} key={post.id}  style={{ textDecoration: 'none' }}>
-                      <span className="link-style-header">
-                        <p className="card-title-line-height">{post.title}</p>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="card-time">
-                    <p>created {post.created_at}</p>
-                    <p>updated {post.updated_at}</p>
-                  </div>
-                  <div className="card-tag">
-                    <p><i className="fas fa-tags"></i>{post.tags}</p>
-                  </div>
-                </div>
-                <div className="col-3">
-                  <div className="row">
-                    <div className="col-8 text-right">
-                      <img className="avatar-large" src={src_user} alt="" />
+              <div className="container">
+                <div className="row card-top">
+                  <div className="col-12 col-md-6  col-lg-9">
+                    <div id="card-post-title">
+                      <Link to={`/posts/${post.id}`} key={post.id}  style={{ textDecoration: 'none' }}>
+                        <span className="link-style-header">
+                          <p className="card-title-line-height">{post.title}</p>
+                        </span>
+                      </Link>
                     </div>
-                    <div className="col-4 card-user-info text-left">
-                      <h4 id="card-user-name">{post.name}</h4>
-                      <p>{post.role}</p>
-                      <p className="card-location-line-height">{post.location}</p>
+                    <div className="card-time">
+                      <p>created {post.created_at}</p>
+                      <p>updated {post.updated_at}</p>
+                    </div>
+                    <div className="card-tag">
+                      <p><i className="fas fa-tags"></i>{post.tags}</p>
+                    </div>
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-3">
+                    <div className="row">
+                      <div className="col-6 col-md-6 col-lg-8 text-right">
+                        <img className="avatar-large" src={src_user} alt="" />
+                      </div>
+                      <div className="col-6  col-md-6 col-lg-4 card-user-info text-left">
+                        <h4 id="card-user-name">{post.name}</h4>
+                        <p>{post.role}</p>
+                        <p className="card-location-line-height">{post.location}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="row card-content">
-                <div className="col-3">
-                  <img src={src} alt="" />
-                </div>
-                <div className="col-9 card-post-body">
-                  <p className="card-displayed-text">{post.body}</p>
+              <div className="container">
+                <div className="row card-content">
+                  <div className="col-12 col-md-6 col-lg-3">
+                    <img className="" src={src} alt="" />
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-9 card-post-body">
+                    <p className="card-displayed-text">{post.body}</p>
+                  </div>
                 </div>
               </div>
             </div>
