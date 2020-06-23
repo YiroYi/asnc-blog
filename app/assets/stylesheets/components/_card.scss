@@ -1,0 +1,61 @@
+.card {
+  background: #FFFFFF;
+  color: black;
+  padding: 50px 40px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.card-top {
+  line-height: 1.6px;
+}
+.card-content img {
+  height: 130px;
+  width: 270px;
+}
+
+.card-time {
+  margin-top: 40px;
+  color: #BDBDBD;
+}
+
+.card-time p {
+  margin-bottom: 20px;
+}
+
+.card-tag  {
+  font-size: 13px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-user-info {
+  font-size: 12px;
+  margin-left: -18px;
+}
+
+#card-post-title {
+  margin-top: 8px;
+}
+
+#card-user-name {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.link-style-header {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  display: block;
+  font-size: 55px !important;
+}
+
+.card-post-body {
+  margin-left: 0;
+}
+
