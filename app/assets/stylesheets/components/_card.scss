@@ -9,12 +9,25 @@
   border: none;
 }
 
+@media(max-width: 576px) {
+  .card {
+    padding: 50px 0px;
+  }
+}
+
 .card-top {
   line-height: 1.6px;
 }
 
 .card-title-line-height {
   line-height: 40pt;
+}
+
+@media(max-width: 576px) {
+  .card-title-line-height {
+    font-size: 15px;
+    line-height: 15pt;
+  }
 }
 
 .card-location-line-height {
@@ -48,6 +61,12 @@
   color: #BDBDBD;
 }
 
+@media(max-width: 576px) {
+  .card-time {
+    line-height: 15pt;
+  }
+}
+
 .card-time p {
   margin-bottom: 20px;
 }
@@ -79,6 +98,20 @@
   font-weight: 800;
   display: block;
   font-size: 55px !important;
+}
+
+@media(max-width: 576px) {
+  .link-style-header {
+    font-size: 15px !important;
+    line-height: 15pt !important;
+    margin-right: 30px;
+  }
+}
+
+@media(max-width: 576px) {
+  .time-sm {
+    margin-right: 30px;
+  }
 }
 
 .card-post-body {

@@ -27,9 +27,9 @@ class PostsShow extends Component {
             </div>
             <div className="ml-5">
               <h3 className="text-center link-style-header">{this.props.post.title}</h3>
-              <p className="text-center">created: {this.props.post.created_at} |
+              <p className="text-center time-sm">created: {this.props.post.created_at} |
               updated: {this.props.post.updated_at}</p>
-              <p>{this.props.post.body}</p>
+              <p className="time-sm">{this.props.post.body}</p>
             </div>
           </div>
           <div className="mt-4">

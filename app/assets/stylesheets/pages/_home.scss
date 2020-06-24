@@ -30,3 +30,9 @@ body {
 .btn--animated {
     animation: moveInBottom .5s ease-out 0.75s;
     animation-fill-mode: backwards; }
+
+@media(max-width: 576px) {
+  .form-container {
+    padding: 32px 45px !important;
+  }
+}
