@@ -36,3 +36,9 @@ body {
     padding: 32px 45px !important;
   }
 }
+
+@media(max-width: 1022px) {
+  .form-container {
+    padding: 32px 50px !important;
+  }
+}
