@@ -18,7 +18,7 @@ class PostsIndex extends Component {
             <div className="card">
               <div className="container">
                 <div className="row card-top">
-                  <div className="col-12 col-md-6  col-lg-9">
+                  <div className="col-12-sm col-md-6  col-lg-9">
                     <div id="card-post-title">
                       <Link to={`/posts/${post.id}`} key={post.id}  style={{ textDecoration: 'none' }}>
                         <span className="link-style-header">
@@ -34,7 +34,7 @@ class PostsIndex extends Component {
                       <p><i className="fas fa-tags"></i>{post.tags}</p>
                     </div>
                   </div>
-                  <div className="col-12 col-md-6 col-lg-3">
+                  <div className="col-12-sm col-md-6 col-lg-3">
                     <div className="row">
                       <div className="col-6 col-md-6 col-lg-8 text-right">
                         <img className="avatar-large" src={src_user} alt="" />
@@ -50,10 +50,10 @@ class PostsIndex extends Component {
               </div>
               <div className="container">
                 <div className="row card-content">
-                  <div className="col-12 col-md-6 col-lg-3">
+                  <div className="col-12-sm col-md-6 col-lg-3">
                     <img className="" src={src} alt="" />
                   </div>
-                  <div className="col-12 col-md-6 col-lg-9 card-post-body">
+                  <div className="col-12-sm col-md-6 col-lg-9 card-post-body">
                     <p className="card-displayed-text">{post.body}</p>
                   </div>
                 </div>
